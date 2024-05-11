@@ -1,21 +1,54 @@
 .firstdiv{
 background-image: url('https://i.postimg.cc/x8HbrSB0/Section.png');
-/* width:100%;
-height: 100%; */
+width:100%;
+height: 70vh;
+position: relative;
 }
-.mav-link{
+.green-bg {
+  background-color: green;
+}
+
+
+.fdiv{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 53, 78, 0.5) 72.4%);
+  position: absolute; 
+   top: 0;
+  left: 0;
+}
+.nav-link{
   font-family: Inter;
 }
 .nav-link:hover {
   color: rgba(137, 191, 80, 1) !important;
 }
-.secdiv{
+.fstdiv{
+  position: relative;
+  /* left:13.5% */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fstpara {
+  font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fsth1 {
+  font-size: 60px;
+  }
+}
+.seconddiv{
   background-color: rgba(137, 191, 80, 0.93);
   height: 99px;
-  width:100%
+  width:100%;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+ 
 }
-@media  (max-width:1450px) {
-  .secdiv {
+@media  (max-width:1024px) {
+  .seconddiv {
       display: none;
   }
 }
@@ -168,3 +201,65 @@ font-family: Montserrat;
    
   }
 }
+
+
+@media (min-width: 820px) and (max-width:1024px) {
+  .sixthdiv_ipad {
+      display: none;
+  }
+}
+.sixth_ipad{
+  width: 100%;
+  height: 55vh;
+  background-image: url('https://i.postimg.cc/nrLtjr8x/automation-tjej-display690x460px-jpg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.sixth_ipad_transparancy{
+  color:white;
+  width: 100%;
+  height: 100%;
+   background: rgba(0, 53, 78, 0.4);
+  position: absolute; 
+   top: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .sixth_ipad {
+   
+    display: none;
+   
+  }
+}
+@media (min-width: 1024px) {
+  .sixth_ipad {
+   
+    display: none;
+   
+  }
+}
+.accordion-content,.accordion-title{
+  background-color: rgba(0, 53, 78, 1);
+  color: white;
+}
+
+
+@media (min-width: 1025px) {
+  .tablet_view {    
+   
+    display: none;
+   
+  }
+}
+@media (min-width: 820px) and (max-width:1024px) {
+  .desktop_view {
+      display: none;
+  }
+}
+
+
+
+
+

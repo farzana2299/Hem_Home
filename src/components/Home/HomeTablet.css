@@ -1,0 +1,32 @@
+.firsttdiv{
+    background-image: url('https://i.postimg.cc/x8HbrSB0/Section.png');
+    width:100%;
+    height: 60vh;
+    position: relative;
+    }
+.ftdiv{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 53, 78, 0.5) 72.4%);
+        position: absolute; 
+         top: 0;
+        left: 0;
+}   
+.eighthdivv{
+    width: 100%;
+    height: 39vh;
+    background-image: url('https://i.postimg.cc/gcM8bVyK/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+  }
+  .transparancyy{
+    width: 100%;
+    height: 100%;
+     background: rgba(0, 53, 78, 0.8);
+    border: 1px solid rgba(0, 53, 78, 1);
+    position: absolute; 
+     top: 0;
+    left: 0;
+  }
