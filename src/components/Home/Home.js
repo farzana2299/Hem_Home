@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import HomeTablet from './HomeTablet';
+import HomeMobile from './HomeMobile';
 
 
 function Home() {
@@ -436,13 +437,15 @@ function Home() {
 
 
 {/* Tablet View  */}
-
+<div className='tablet_view'>
 <HomeTablet></HomeTablet>
-
+</div>
 {/* Tablet view end  */}
 
-
-            
+{/* mobile view  */}
+<div className='mobile_view'>
+<HomeMobile></HomeMobile>
+</div>
 
         </div>
     )
