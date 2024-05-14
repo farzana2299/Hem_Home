@@ -1,8 +1,10 @@
 .firstdiv{
 background-image: url('https://i.postimg.cc/x8HbrSB0/Section.png');
 width:100%;
-height: 70vh;
+height: 110vh;
 position: relative;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .green-bg {
   background-color: green;
@@ -39,7 +41,7 @@ position: relative;
   }
 }
 .seconddiv{
-  background-color: rgba(137, 191, 80, 0.93);
+  background-color: rgba(137, 191, 80, 1);
   height: 99px;
   width:100%;
   z-index: 1000;
@@ -94,7 +96,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .eighthdiv{
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-image: url('https://i.postimg.cc/gcM8bVyK/img1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -266,6 +268,14 @@ font-family: Montserrat;
   }
 }
 
+.newdiv{
+  background-image: url('https://i.postimg.cc/pX3wzKhs/switch.jpg');
+  width:'100%';
+  height:'500px';
+
+}
 
 
-
+.hidden-paragraph {
+  display: none;
+}

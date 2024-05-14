@@ -13,17 +13,23 @@ function Home() {
         var buttonRow = document.getElementById('buttonRow' + sectionNumber);
 
         // Toggle the visibility of the paragraph and buttonRow
-        paragraph.style.display = paragraph.style.display === 'block' ? 'none' : 'block';
-        buttonRow.style.display = buttonRow.style.display === 'block' ? 'none' : 'block';
+        var isHidden = paragraph.style.display === 'none';
+        paragraph.style.display = isHidden ? 'block' : 'none';
+        buttonRow.style.display = isHidden ? 'block' : 'none';
     }
 
-    // Initially hide the paragraph and buttonRow
     document.addEventListener('DOMContentLoaded', function () {
+        // Initially hide the paragraph and buttonRow
         var paragraph = document.getElementById('paragraph10');
         var buttonRow = document.getElementById('buttonRow10');
-
         paragraph.style.display = 'none';
         buttonRow.style.display = 'none';
+
+        // Add event listener to the arrow button to toggle paragraph visibility
+        var arrowButton = document.querySelector('.fa-angle-down');
+        arrowButton.addEventListener('click', function () {
+            toggleParagraph(10);
+        });
     });
 
 
@@ -55,9 +61,9 @@ function Home() {
                             </Navbar>
                         </div>
 
-                        <div className='pt-5 container w-50 text-white text-start mb-5 fstdiv'>
-                            <h1 className='fsth1'>EL, Teknik & Installationer för framtiden med <span style={{ color: 'rgba(137, 191, 80, 1)' }}> hållbara framsteg</span> </h1>
-                            <p className=' w-75 fstpara'>Med målet att vara marknadsledande, kombinerar Egestam och Mattsson expertkunskap, engagemang och innovation för att bygga varaktiga kundrelationer och leverera arbete med fokus på kvalitet, miljömedvetenhet och säkerhet.</p>
+                        <div className='pt-5 container w-75 text-white text-start mb-5 fstdiv' style={{position:'relative',top:'10%',left:'8%'}}>
+                            <h1 className='fsth1' style={{fontSize:'64px',fontFamily:'Inter'}}>EL, Teknik & Installationer för framtiden med <span style={{ color: 'rgba(137, 191, 80, 1)' }}> hållbara framsteg</span> </h1>
+                            <h2 className=' w-75 fstpara' style={{fontSize:'20px'}}>Med målet att vara marknadsledande, kombinerar Egestam och Mattsson expertkunskap, engagemang och innovation för att bygga varaktiga kundrelationer och leverera arbete med fokus på kvalitet, miljömedvetenhet och säkerhet.</h2>
                         </div>
                     </div>
                 </div>
@@ -68,32 +74,32 @@ function Home() {
                             <img className='pt-3' style={{ position: 'relative', left: '40%' }} src="https://i.postimg.cc/x1bDkwCS/image-3-1.png" alt="" />
                         </Col>
                         <Col lg={1} md={1} sm={1} xs={1}>
-                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}>Hem</p>
+                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}><b>Hem</b> </p>
                         </Col>
                         <Col lg={1} md={1} sm={1} xs={1}>
-                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}>Hållbarhet</p>
+                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}><b>Hållbarhet</b></p>
                         </Col>
                         <Col lg={1} md={1} sm={1} xs={1}>
-                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}>Tjänster</p>
+                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}><b>Tjänster</b></p>
                         </Col>
                         <Col lg={1} md={1} sm={1} xs={1}>
-                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}>Nyheter</p>
+                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}><b>Nyheter</b></p>
                         </Col>
                         <Col lg={1} md={1} sm={1} xs={1}>
-                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}>Kontakt</p>
+                            <p className='ps-5' style={{ position: 'relative', top: '50%' }}><b>Kontakt</b></p>
                         </Col>
                         <Col lg={3} md={3} sm={3} xs={3}>
-                            <p className=' ps-5' style={{ position: 'relative', top: '50%' }}>Jobba med oss</p>
+                            <p className=' ps-5' style={{ position: 'relative', top: '50%' }}><b>Jobba med oss</b></p>
                         </Col>
                     </Row>
                 </div>
 
                 <div className='thirddiv pt-5 pb-5'>
-                    <div className='w-50 container text-start' style={{ position: 'relative', right: '13%' }}>
-                        <h2 style={{ color: 'rgba(0, 53, 78, 1)' }}><img src="https://i.postimg.cc/rm7vcDQB/image.png" alt="" />Välkommen till EM El & Data AB </h2>
+                    <div className='w-75 container text-start' style={{ position: 'relative', right: '0%' }}>
+                        <h2 style={{ color: 'rgba(0, 53, 78, 1)',fontSize:'40px'}}><img src="https://i.postimg.cc/rm7vcDQB/image.png" style={{width:'6%',height:'50%'}} alt="" /><b> Välkommen till EM El & Data AB</b> </h2>
                         <div>
-                            <p className=''>Egestam & Mattsson grundades 2012, vi är experter inom el- och datanätverksinstallationer.
-                                Ett entreprenörsdrivet företag som drivs med ett team engagerade medarbetare. Vi kombinerar gedigen teknisk kunskap med ett starkt engagemang för hållbarhet, fokuserade på att leverera miljövänliga och innovativa lösningar för fastigheter och infrastruktur.</p>
+                            <h3 style={{fontSize:'20px'}}>Egestam & Mattsson grundades 2012, vi är experter inom el- och datanätverksinstallationer.
+                                Ett entreprenörsdrivet företag som drivs med ett team engagerade medarbetare. Vi kombinerar gedigen teknisk kunskap med ett starkt engagemang för hållbarhet, fokuserade på att leverera miljövänliga och innovativa lösningar för fastigheter och infrastruktur.</h3>
                         </div>
                     </div>
                 </div>
@@ -105,7 +111,7 @@ function Home() {
                             <i className="fa-solid fa-angle-down text-white pe-5" style={{ position: 'relative', right: '15%' }} onClick={() => toggleParagraph(10)}></i>
                         </div>
                         <p id="paragraph10" style={{ color: '#FFFFFF', marginLeft: '6%' }} className="hidden-paragraph">Vid nybyggnation, oavsett om det gäller bostäder, kommersiella lokaler eller kontor, är kvalitetsinstallationer av el och <br /> datanätverk kritiska. Dessa installationer omfattar en rad tjänster från belysning och uppvärmning till avancerade <br /> datanätverk och kommunikationssystem. Integration av moderna teknologier som smarta hem- och kontorslösningar, <br /> samt energieffektiva installationer, är centrala för att skapa en hållbar, säker och effektiv miljö anpassad för framtida <br /> behov. Som experter på området är Egestam & Mattsson de du kan lita på för att leverera högkvalitativa installationer. <br /> Kontakta oss för  att ta det första steget mot en framtidssäker fastighet.</p>
-                        <Row id="buttonRow10" style={{ marginLeft: '9%', display: 'none', marginTop: '5%' }}>
+                        <Row id="buttonRow10" style={{ marginLeft: '9.5%', display: 'none', marginTop: '5%' }}>
                             <p style={{
                                 borderRadius: '18px',
                                 padding: '7px',
@@ -126,18 +132,17 @@ function Home() {
                         </Row>
                     </div>
                 </div>
-
-                <div className='section' style={{ backgroundColor: '#89BF50' }}>
+                <div className='section' style={{ backgroundColor: '#89BF50',position:'relative',bottom:'5.5px' }}>
                     <div style={{ position: 'relative', left: '6%' }}>
                         <div className='pt-4 pb-4 d-flex justify-content-between align-items-center' style={{ marginTop: '-10px', paddingLeft: '90px', overflowX: 'hidden' }}>
-                            <h2 className='text-white fw-normal'><span style={{ fontSize: '40px', color: '#00354E', position: 'relative', right: '5%' }}>Renovering</span></h2>
-                            <i className="fa-solid fa-angle-down pe-5" style={{ position: 'relative', right: '15%' }} onClick={() => toggleParagraph(11)}></i>
+                            <h2 className='text-white fw-normal'><span style={{ fontSize: '40px', color: 'white', position: 'relative', right: '9%', }}>Renovering</span></h2>
+                            <i className="fa-solid fa-angle-down pe-5" style={{ position: 'relative', right: '15%', color: 'white' }} onClick={() => toggleParagraph(11)}></i>
                         </div>
-                        <p id="paragraph11" style={{ color: '#00354E', marginLeft: '6%' }} className="hidden-paragraph">
-                            Egestam och Mattsson erbjuder omfattande tjänster för renovering inom el och installation, anpassade för både <br /> bostäder och kommersiella fastigheter. Vår expertis täcker allt från uppgradering av  befintliga elsystem till installation av <br /> moderna, energieffektiva lösningar. Vi förstår vikten av att kombinera funktionalitet med estetik och arbetar nära våra <br /> kunder för att säkerställa att varje projekt möter deras specifika behov och önskemål. Vårt team är specialiserat på att <br /> leverera högkvalitativa resultat, från planering till slutförande, med fokus på säkerhet, hållbarhet och teknisk innovation. <br /> Kontakta oss för att diskutera dina renoveringsbehov och få en skräddarsydd offert från branschens experter.
+                        <p id="paragraph11" style={{ fontSize: '16px', color: '#00354E', marginLeft: '6%', position: 'relative', right: '1%' }} className="hidden-paragraph container w-75">
+                            Egestam och Mattsson erbjuder omfattande tjänster för renovering inom el och installation, anpassade för både  bostäder och kommersiella fastigheter. Vår expertis täcker allt från uppgradering av  befintliga elsystem till installation av  moderna, energieffektiva lösningar. Vi förstår vikten av att kombinera funktionalitet med estetik och arbetar nära våra  kunder för att säkerställa att varje projekt möter deras specifika behov och önskemål. Vårt team är specialiserat på att  leverera högkvalitativa resultat, från planering till slutförande, med fokus på säkerhet, hållbarhet och teknisk innovation.  Kontakta oss för att diskutera dina renoveringsbehov och få en skräddarsydd offert från branschens experter.
                         </p>
-                        <Row id="buttonRow11" style={{ marginLeft: '9%', marginTop: '5%', display: 'none' }}>
-                            <p style={{
+                        <Row className='pt-4' id="buttonRow11" style={{ position: 'relative', left: '0.5%', marginLeft: '9%', marginTop: '3.5%', display: 'none' }}>
+                        <p style={{
                                 borderRadius: '18px',
                                 padding: '7px',
                                 textAlign: 'center',
@@ -150,7 +155,7 @@ function Home() {
                                 zIndex: 100,
                                 fontSize: '14px',
                                 left: '-50px',
-                                bottom: '34px'
+                                bottom: '39px'
                             }}>
                                 Kontakta oss
                             </p>
@@ -158,7 +163,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className='section' style={{ backgroundColor: '#00354E' }}>
+                <div className='section' style={{ backgroundColor: '#00354E',position:'relative',bottom:'11px' }}>
                     <div style={{ position: 'relative', left: '6%' }}>
                         <div className='pt-4 pb-4 d-flex justify-content-between align-items-center' style={{ marginTop: '-10px', paddingLeft: '90px', overflowX: 'hidden' }}>
                             <h2 className='text-white fw-normal'><span style={{ fontSize: '40px', position: 'relative', right: '5%' }}>Installation</span></h2>
@@ -166,7 +171,7 @@ function Home() {
                         </div>
                         <p id="paragraph12" style={{ color: 'white', marginLeft: '6%' }} className="hidden-paragraph">
                             Egestam och Mattsson erbjuder specialanpassade installationstjänster för moderna värmesystem, smarta hem, effektiva <br /> kontorslösningar, avancerade säkerhetssystem och omfattande datainstallationer. Vår breda erfarenhet garanterar <br /> installationer som inte bara ökar komforten utan även energieffektiviteten och säkerheten i din fastighet. Vi engagerar oss i <br /> ett nära samarbete med våra kunder för att förstå deras unika behov, säkerställa funktionell och estetiskt tilltalande design <br /> och implementera de senaste innovationerna. Från grundlig planering till precision i utförandet, är vårt expertteam dedikerat <br /> till detaljer och de högsta standarderna av säkerhet och hållbarhet. Kontakta Egestam och Mattsson för att utforska hur vi <br /> kan transformera ditt utrymme till en intelligent och energismart miljö.  </p>
-                        <Row id="buttonRow12" style={{ marginLeft: '9%', display: 'none', marginTop: '5%' }}>
+                        <Row id="buttonRow12" style={{ marginLeft: '9.5%', display: 'none', marginTop: '5%' }}>
                             <p style={{
                                 borderRadius: '18px',
                                 padding: '7px',
@@ -190,8 +195,8 @@ function Home() {
 
                 {/* accordion finish  */}
                 <div className='fifthdiv pt-5 pb-5'>
-                    <div className='container w-75 text-center' style={{ color: 'rgba(0, 53, 78, 1)' }}>
-                        <h3 className='pb-3'>Norden ställer om till klimatneutrala samhällen. Egestam & Mattsson bistår dig som kund i att utveckla fastigheter och infrastruktur som förbättrar samhällets funktion nu och för framtiden.</h3>
+                    <div className='container  text-center' style={{ width:'60%',color: 'rgba(0, 53, 78, 1)',fontFamily:'Inter' }}>
+                        <h3 className='pb-3' style={{fontSize:'24px'}}>Norden ställer om till klimatneutrala samhällen. Egestam & Mattsson bistår dig som kund i att utveckla fastigheter och infrastruktur som förbättrar samhällets funktion nu och för framtiden.</h3>
                         <p className='text-center'><u>Så här jobbar vi  med hållbarhet</u> </p>
                     </div>
                 </div>
@@ -223,7 +228,7 @@ function Home() {
                         <Col lg={6} md={6} sm={12} xs={12}>
                             <div className='container w-75'>
                                 <img style={{ width: '85%', height: '75%' }} src="https://i.postimg.cc/FHvq61Rx/Rectangle-6.png" alt="" />
-                                <h2 className='pt-3' style={{ color: 'rgba(0, 58, 58, 1)' }}>VÅRT MOTTO</h2>
+                                <h2 className='pt-3' style={{ color: 'rgba(0, 58, 58, 1)',fontSize:'48px' }}><b>VÅRT MOTTO</b></h2>
                                 <p style={{ fontFamily: 'Roboto', fontSize: '20px' }}>Kontrollerad riskhantering med förankring i god affärsetik</p>
                                 <p style={{ fontFamily: 'Roboto' }} className='pt-2'>Egestam och Mattsson strävar efter att generera stark avkastning genom en stabil ekonomisk tillväxt. Vår verksamhet präglas av en noggrant kontrollerad riskhantering med förankring i god affärsetik. Ett centralt fokus i vår affärsstrategi är att aktivt minska vår miljöpåverkan, vilket vi ser som en avgörande aspekt för att främja en hållbar framtid.</p>
 
@@ -231,14 +236,14 @@ function Home() {
                         </Col>
                         <Col lg={6} md={6} sm={12} xs={12}>
                             <div className=''>
-                                <img style={{ width: '100%', height: '150%' }} src="https://i.postimg.cc/wTdMZDsP/Group-45.png" alt="" />
+                                <img style={{ width: '85%', height: '425px' }} src="https://i.postimg.cc/wTdMZDsP/Group-45.png" alt="" />
                             </div>
 
                         </Col>
                     </Row>
                     <div className='ps-5'>
                         <Row className='pt-5 container ps-5'>
-                            <h3 className='ps-4' style={{ color: 'rgba(0, 58, 58, 1)', position: 'relative', fontFamily: 'Roboto' }}>Nyheter</h3>
+                            <h3 className='ps-4' style={{ color: 'rgba(0, 58, 58, 1)', position: 'relative', fontFamily: 'Roboto' }}><b>Nyheter</b></h3>
                             <Col lg={4} md={4} sm={12} xs={12}>
                                 <div className='container ' style={{ color: ' rgba(0, 53, 78, 1)' }}>
 
@@ -260,7 +265,7 @@ function Home() {
                                     <h1 className='w-100'>Elektrifiering och framtidssäkring </h1>
                                     <p style={{ fontSize: '20px' }}>Egestam och Mattsson leder vägen i digitaliseringens era</p>
                                     <p style={{ fontSize: '15px', color: 'rgba(0, 0, 0, 1)' }}>I en tid där digitalisering och teknologisk innovation formar vårt samhälle, lägger Egestam och Mattsson stor vikt vid att ständigt vara i framkant. Med insikt om de framväxande trenderna - ökad elkonsumtion, ett starkare hållbarhetsfokus, och digitalisering - förstår Egestam & Mattsson vikten av att kontinuerligt kompetensutveckla sin personal. Genom att investera i utbildning och specialisering inom områden som integrerade system och effektiva energilösningar, positionerar Egestam och Mattsson sig för att möta marknadens behov och vara en nyckelaktör i att forma en mer hållbar och effektiv framtid.</p>
-                                    <div className='pt-4'>
+                                    <div className='pt-4' style={{ position: 'relative', top: '3px' }}>
                                         <p style={{ fontSize: '15px', position: 'relative', left: '75%' }}>Läs mer<i class="fa-solid fa-angles-right"></i></p>
                                     </div>
                                 </div>
@@ -272,7 +277,7 @@ function Home() {
                                     <p style={{ fontSize: '20px' }}>Egestam och Mattsson</p>
                                     <p style={{ fontSize: '20px', position: 'relative', bottom: '17px' }}> utmärker sig återigen</p>
                                     <p style={{ color: 'rgba(0, 0, 0, 1)', position: 'relative', bottom: '11px', fontSize: '15px' }}>Egestam och Mattsson har än en gång bevisat sin förmåga att överträffa marknadens förväntningar genom att vinna det prestigefyllda DI-Gasell-priset. Denna utmärkelse, som ges till Sveriges snabbast växande företag, speglar deras konsekventa tillväxt och framgång i branschen. Genom att fokusera på innovation, kundservice och hållbarhet, har Egestam och Mattsson inte bara förbättrat sin marknadsposition utan också bidragit till positiva samhällsförändringar. Denna prestation betonar vår starka drivkraft och engagemang för att kontinuerligt utvecklas och leda vägen inom el- och datanätverksinstallation.</p>
-                                    <div className='pt-4' style={{ position: 'relative', top: '12px' }}>
+                                    <div className='pt-4' style={{ position: 'relative', top: '15px' }}>
                                         <p style={{ fontSize: '15px', position: 'relative', left: '75%' }}>Läs mer<i class="fa-solid fa-angles-right"></i></p>
                                     </div>
                                 </div>
@@ -283,10 +288,10 @@ function Home() {
                 <div className='seventhdiv ps-5 pb-5'>
                     <Row className='container'>
                         <Col lg={6} md={6} sm={6} xs={6}>
-                            <h2 className='ps-5' style={{ color: 'rgba(0, 58, 58, 1)', fontFamily: 'Roboto' }}>Projekt</h2>
+                            <h2 className='ps-4' style={{ color: 'rgba(0, 58, 58, 1)', fontFamily: 'Roboto',position:'relative',left:'10px' }}><b>Projekt</b></h2>
                         </Col>
                         <Col lg={6} md={6} sm={6} xs={6}>
-                            <h2 style={{ color: 'rgba(0, 58, 58, 1)', position: 'relative', left: '200px', fontFamily: 'Inter' }}>Hör av dig till oss</h2>
+                            <h2 style={{ color: 'rgba(0, 58, 58, 1)', position: 'relative', left: '215px', fontFamily: 'Inter' }}><b>Hör av dig till oss</b></h2>
                         </Col>
                     </Row>
 
@@ -294,7 +299,7 @@ function Home() {
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div className=' ' style={{ color: ' rgba(0, 53, 78, 1)' }}>
 
-                                <img style={{ width: '100%', height: '100%' }} src="https://i.postimg.cc/qRb7j29m/Link-solhem-skanska-4-jpg.png" alt="" />
+                                <img style={{ width: '90%', height: '100%' }} src="https://i.postimg.cc/qRb7j29m/Link-solhem-skanska-4-jpg.png" alt="" />
                                 <a href="asdf" style={{ textDecoration: 'none', color: 'rgba(114, 114, 114, 1)' }}> MALMO, SODERTALJE</a>
                                 <h3 style={{ color: 'rgba(0, 58, 58, 1)', fontFamily: 'Inter' }}>Konstent att bygga prisvärda & hållbara förskolor</h3>
 
@@ -303,15 +308,15 @@ function Home() {
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div className=' '>
 
-                                <img style={{ width: '100%', height: '100%' }} src="https://i.postimg.cc/qRb7j29m/Link-solhem-skanska-4-jpg.png" alt="" />
+                                <img style={{ width: '90%', height: '100%' }} src="https://i.postimg.cc/qRb7j29m/Link-solhem-skanska-4-jpg.png" alt="" />
                                 <a href="asdf" style={{ textDecoration: 'none', color: 'rgba(114, 114, 114, 1)' }}> MALMO, SODERTALJE</a>
                                 <h3 style={{ color: 'rgba(0, 58, 58, 1)', fontFamily: 'Inter' }}>Konstent att bygga prisvärda & hållbara förskolor</h3>
 
                             </div>
                         </Col>
                         <Col lg={4} md={4} sm={12} xs={12}>
-                            <div className=''>
-                                <img className='pb-5' style={{ width: '100%', height: '255px' }} src="https://i.postimg.cc/nLczfdYF/bravida-5180-690x460px-jpg.png" alt="" />
+                            <div className='ps-3'>
+                                <img className='pb-5' style={{ width: '90%', height: '240px' }} src="https://i.postimg.cc/nLczfdYF/bravida-5180-690x460px-jpg.png" alt="" />
                                 <h3 style={{ color: 'rgba(0, 58, 58, 1)', fontFamily: 'Inter', position: 'relative', bottom: '35px' }}>Behöver du hjälp med något?
                                     Kontakta oss idag!</h3>
                                 <Row style={{ position: 'relative', bottom: '35px' }}>
@@ -330,11 +335,11 @@ function Home() {
                         </Col>
                     </Row>
                 </div>
-                <div className='eighthdiv pt-5  pb-5'>
+                <div className='eighthdiv pt-5  pb-5' >
                     <div className='transparancy'>
                         <Row>
                             <Col lg={8} md={8} sm={8} xs={8}>
-                                <div style={{ color: 'white' }} className='container ps-5 pt-5'>
+                                <div style={{ color: 'white',position:'relative',top:'10%' }} className='container ps-5 pt-5'>
                                     <h3>Vi gör skillnad</h3>
                                     <h1>Egestam & Mattsson satsar på en hållbar affär</h1>
                                     <div className=' w-75' style={{ fontFamily: 'Roboto' }}>
@@ -356,96 +361,96 @@ function Home() {
                         </Row>
                     </div>
                 </div>
-{/* footer  */}
-<div>
-            <div className='ft  pb-3'>
-                <Row className='pb-1'>
-                    <Col lg={3} md={6} sm={6} xs={12} className='order-2 order-md-1 order-sm-1'>
-                        <div className='text-start ps-4 pt-3 '>
-                            <h3>Kontakt</h3>
-                           
-                            <div className='line-spacing-mobile'>
-                            <p className='fcp2'>Egestam Mattsson El & Data AB</p>
-                            <p className='fcp2'>Ridspögatan 15a</p>
-                            <p className='fcp2'>213 77 Malmö</p>
-                            </div>
-                            <div className='line-spacing-mobile pt-3'>
-                            <p className='fcp3'>Tel: 040-6170166</p>
-                            <p className='fcp3'>E-post: info@emeldata.se </p>
-                            </div>
-                            <p className='fcp3 privacypolicy-align pt-3'>Integritetspolicy</p>
-                        </div>
-                      
-                        <hr className='hr-in-desktop'/>
-                    </Col>
-                    <Col lg={3} md={6} sm={6} xs={12} className='secrow text-start order-3 order-md-3 order-sm-2'>
-                        <Row style={{ fontSize: '120%', position: 'relative', top: '3%' }} className='ps-3 pt-5 '>
-                            <Col lg={6} md={6} sm={6} xs={6} className='custom-div-mobile'>
-                                <div className='w-100 conatiner second-paragraph'>
-                                    <b><p>Meny</p></b>
-                                    <p>Hem</p>
-                                    <p>Hållbarhet</p>
-                                    <p>Tjänter</p>
-                                    <p>Kontakta oss</p>
-                                    <p>Jobba med oss</p>
+                {/* footer  */}
+                <div>
+                    <div className='ft  pb-3'>
+                        <Row className='pb-1 ps-5'>
+                            <Col lg={3} md={6} sm={6} xs={12} className='order-2 order-md-1 order-sm-1'>
+                                <div className='text-start ps-4 pt-3 '>
+                                    <h3>Kontakt</h3>
+
+                                    <div className='line-spacing-mobile'>
+                                        <p className='fcp2'>Egestam Mattsson El & Data AB</p>
+                                        <p className='fcp2'>Ridspögatan 15a</p>
+                                        <p className='fcp2'>213 77 Malmö</p>
+                                    </div>
+                                    <div className='line-spacing-mobile pt-3'>
+                                        <p className='fcp3'>Tel: 040-6170166</p>
+                                        <p className='fcp3'>E-post: info@emeldata.se </p>
+                                    </div>
+                                    <p className='fcp3 privacypolicy-align pt-3'>Integritetspolicy</p>
                                 </div>
-                                <div className='w-100 conatiner paragraph'>
-                                    <b><p>Meny</p></b>
-                                    <p>Vårt erbjudande</p>
-                                    <p>Hållbarhet</p>
-                                    <p>Jobba hos oss</p>
-                                    <p>Om oss</p>
-                                    <p>Kontakta oss</p>
+
+                                <hr className='hr-in-desktop' />
+                            </Col>
+                            <Col lg={3} md={6} sm={6} xs={12} className='secrow text-start order-3 order-md-3 order-sm-2'>
+                                <Row style={{ fontSize: '120%', position: 'relative', top: '3%' }} className='ps-3 pt-5 '>
+                                    <Col lg={6} md={6} sm={6} xs={6} className='custom-div-mobile'>
+                                        <div className='w-100 conatiner second-paragraph'>
+                                            <b><p>Meny</p></b>
+                                            <p>Hem</p>
+                                            <p>Hållbarhet</p>
+                                            <p>Tjänter</p>
+                                            <p>Kontakta oss</p>
+                                            <p>Jobba med oss</p>
+                                        </div>
+                                        <div className='w-100 conatiner paragraph'>
+                                            <b><p>Meny</p></b>
+                                            <p>Vårt erbjudande</p>
+                                            <p>Hållbarhet</p>
+                                            <p>Jobba hos oss</p>
+                                            <p>Om oss</p>
+                                            <p>Kontakta oss</p>
+                                        </div>
+                                    </Col>
+                                    <Col lg={6} md={6} sm={6} xs={6} className='custom-div-mobile'>
+                                        <div className='w-100 conatiner ms-3 '>
+                                            <b><p style={{ display: 'inline-flex', alignItems: 'center' }}>Din integritet</p></b>
+                                            <p>Integritetspolicy</p>
+                                            <p>Cookiepolicy</p>
+                                            <p style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}><img src="https://i.postimg.cc/90r8QxHk/List-Item-Link-SVG.png" alt="Facebook" /> Facebook</p>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col lg={3} md={3} sm={6} xs={12} className="d-none d-lg-block order-4 order-sm-3 pt-3 container">
+                                <div className='ps-5'>
+                                    <h3 className='text-start'>Gasellvinnare</h3>
+                                    <img src="https://i.postimg.cc/qBcnd43C/Grundkraft-Gasellvinnare-2021-2022-2023-1.png" alt=""
+                                        style={{ position: 'relative', right: '10%' }} />
+                                    <div className='w-100  text-start'>
+                                        <p style={{ fontSize: '80%' }}>Med målet att vara marknadsledande, kombinerar Egestam och Mattsson expertkunskap, engagemang och innovation för att bygga varaktiga kundrelationer och leverera arbete med fokus på kvalitet, miljömedvetenhet och säkerhet.</p>
+                                    </div>
                                 </div>
                             </Col>
-                            <Col lg={6} md={6} sm={6} xs={6}  className='custom-div-mobile'>
-                                <div className='w-100 conatiner ms-3 '>
-                                    <b><p style={{ display: 'inline-flex', alignItems: 'center' }}>Din integritet</p></b>
-                                    <p>Integritetspolicy</p>
-                                    <p>Cookiepolicy</p>
-                                    <p style={{ display: 'inline-flex', alignItems: 'center',gap: '5px' }}><img src="https://i.postimg.cc/90r8QxHk/List-Item-Link-SVG.png"  alt="Facebook" /> Facebook</p>
+                            <Col lg={3} md={6} sm={3} xs={12} className=' order-1 order-lg-4 order-md-2 order-sm-4  custom-right-align-tablet custom-right-align-mobile'>
+                                <div className='custom-image-align-tablet pt-5'>
+                                    <img className='pt-4 top-align' src="https://i.postimg.cc/tCtLPZVC/image-3.png" alt="" />
                                 </div>
                             </Col>
                         </Row>
-                    </Col>
-                    <Col lg={3} md={3} sm={6} xs={12} className="d-none d-lg-block order-4 order-sm-3 pt-3 container">
-                        <div className='ps-5'>
-                            <h3 className='text-start'>Gasellvinnare</h3>
-                            <img src="https://i.postimg.cc/qBcnd43C/Grundkraft-Gasellvinnare-2021-2022-2023-1.png" alt=""
-                                style={{ position: 'relative', right: '10%' }} />
-                            <div className='w-100  text-start'>
-                                <p style={{ fontSize: '80%' }}>Med målet att vara marknadsledande, kombinerar Egestam och Mattsson expertkunskap, engagemang och innovation för att bygga varaktiga kundrelationer och leverera arbete med fokus på kvalitet, miljömedvetenhet och säkerhet.</p>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col lg={3} md={6} sm={3} xs={12} className=' order-1 order-lg-4 order-md-2 order-sm-4  custom-right-align-tablet custom-right-align-mobile'>
-                        <div className='custom-image-align-tablet pt-5'>
-                            <img className='pt-4 top-align' src="https://i.postimg.cc/tCtLPZVC/image-3.png" alt="" />
-                        </div>
-                    </Col>
-                </Row>
-                
-                <Row className='text-center cprow d-none d-lg-block' >
-                    <Col lg={12} md={12} sm={12} xs={12}>
-                    <hr className='w-75 container' />
-                        Copyright © 2024 All rights reserved.
-                    </Col>
-                </Row>
-            </div>
-        </div>
+
+                        <Row className='text-center cprow d-none d-lg-block' >
+                            <Col lg={12} md={12} sm={12} xs={12}>
+                                <hr className='w-75 container' />
+                                Copyright © 2024 All rights reserved.
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
             </div>
 
 
-{/* Tablet View  */}
-<div className='tablet_view'>
-<HomeTablet></HomeTablet>
-</div>
-{/* Tablet view end  */}
+            {/* Tablet View  */}
+            <div className='tablet_view'>
+                <HomeTablet></HomeTablet>
+            </div>
+            {/* Tablet view end  */}
 
-{/* mobile view  */}
-<div className='mobile_view'>
-<HomeMobile></HomeMobile>
-</div>
+            {/* mobile view  */}
+            <div className='mobile_view'>
+                <HomeMobile></HomeMobile>
+            </div>
 
         </div>
     )
